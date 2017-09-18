@@ -6,6 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import static jmockit.examples.basicwithoutmocking.CommonUtil.isStringEmptyOrNull;
+
 public class CommonUtilTest {
 
 	@Test
@@ -17,7 +19,7 @@ public class CommonUtilTest {
 
 	@Test(dataProvider = "dpIsStringEmptyOrNull_AssertTrue")
 	public void testIsStringEmptyOrNull_AssertTrue(String str) {
-		Assert.assertTrue(CommonUtil.isStringEmptyOrNull(str));
+		Assert.assertTrue( isStringEmptyOrNull(str));
 	}
 	
 	@Test(dataProvider = "dpIsStringEmptyOrNull_AssertFalse")
